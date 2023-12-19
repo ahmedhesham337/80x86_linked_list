@@ -356,7 +356,7 @@ _options_opt4 proc                                                              
     call _print_string                                                           ; print "Value (1 char): "
     call _read_char                                                              ; read character from user
     xor dx, dx                                                                   ; zero out dx
-    mov dl, al                                                                   ; mov read character to dl                                                            ; convert to int
+    mov dl, al                                                                   ; mov read character to dl
     mov ax, [_lnk_nodes]                                                         ; load number of nodes to ax
     cmp ax, 0000h                                                                ; check if number of nodes is zero
     je _options_opt4_first_node                                                  ; jump to _options_opt4_first_node if zero
