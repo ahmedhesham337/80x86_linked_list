@@ -171,7 +171,7 @@ _options_opt1 proc                                                              
         mov bx, [_lnk_head_ptr]                                                  ; load list head pointer
         mov si, bx                                                               ; into si
         _options_opt1_show_list_traversal_loop:                                  ; traverse the list
-            mov dx, [si]                                                         ; load node_ptr->data to dx                                                    ; convert to char
+            mov dx, [si]                                                         ; load node_ptr->data to dx
             call _print_char                                                     ; print element
             lea dx, _sym_arr                                                     ; load _sym_arr address to dx
             call _print_string                                                   ; print " --> "
